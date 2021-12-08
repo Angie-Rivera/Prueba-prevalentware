@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 function Card({texto, icono}) {
     return (
         <div class="rounded overflow-hidden shadow-md m-6">

@@ -1,22 +1,25 @@
 import React from 'react'
 
-const Formulario = () => {
+const Empresas = () => { 
     return (
         <div>
-            <form className='flex flex-col'>
+            <div className='flex flex-col w-full justify-center items-center'>
+            <form 
+            className='flex flex-col flex-wrap p-6 mt-8 max-w-md border-2 rounded-md'
+            onSubmit='{handleSubmit(onSubmit)}'>
                 <label>
                     Nombre
                     <input 
                     name='nombre' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg mx-10'
                     type='text'
                     required/>
                 </label>
                 <label>
                     Razón social
                     <input 
-                    name='razon-social' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    name='razon' 
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg mx-3 my-2'
                     type='text'
                     required/>
                 </label>
@@ -24,7 +27,7 @@ const Formulario = () => {
                     NIT
                     <input 
                     name='nit' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg mx-16'
                     type='text'
                     required/>
                 </label>
@@ -32,7 +35,7 @@ const Formulario = () => {
                     Identificación
                     <input 
                     name='identificacion' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg my-2 mx-2'
                     type='text'
                     required/>
                 </label>
@@ -40,7 +43,7 @@ const Formulario = () => {
                     #de Empleados
                     <input 
                     name='empleados' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg mx-2'
                     type='number'
                     required/>
                 </label>
@@ -48,13 +51,17 @@ const Formulario = () => {
                     Logo
                     <input 
                     name='logo' 
-                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
+                    className='bg-gray-50 border border-gray-600 p-2 rounded-lg mx-16 my-2'
                     type='text'
                     required/>
                 </label>
+                <button type='submit'
+          className='bg-indigo-400 p-1 rounded-md shadow-md hover:bg-indigo-600 text-white mx-10 my-4'
+          onClick=''>
+              Registrar empresa</button>
             </form>
+            </div>
         </div>
     )
 }
-
-export default Formulario
+export default Empresas;
